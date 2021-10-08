@@ -1,11 +1,67 @@
-main {
-  display: flex;
+/* header 
+header {
+  display: block;
+  width: 100%;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.92);
+  background-color: #1d1d1f;
+  z-index: 9999;
+}
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+html {
+  font-family: "Roboto", Helvetica, sans-serif;
 }
 
+li {
+  display: inline;
+}
+
+/* Main section */
+
+main {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+/* landing container */
+
 .landing {
-  background-image: url("../media/images/Header.png");
-  background-position: center;
-  background-repeat: no-repeat;
+  display: flex;
+  flex-flow: column wrap;
+  height: 100vh;
+  width: auto;
+  align-content: center;
+  justify-content: center;
+}
+
+.text-wrapper {
+  text-align: center;
+  z-index: 2;
+  color: white;
+}
+
+.landing-image {
+  background-image: url("../media/images/Header_small.png");
   background-size: cover;
-  height: 500px;
+  background-repeat: no-repeat;
+  background-color: black;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Breakpoints */
+
+@media only screen and (min-device-width: 730px) {
+  .landing-image {
+    background-image: url("../media/images/Header.png");
+  }
 }
