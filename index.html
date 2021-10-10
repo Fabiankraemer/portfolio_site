@@ -7,44 +7,48 @@
         <link rel="stylesheet" href="resources/css/style.css">
     </head>
     <body>
-    <!--
         <header>
             <nav>
-                <ul>
-                    <li>back</li>
-                    <li>Mail</li>
-                    <li>Github</li>
-                </ul>
+                <div class="redirect" id="home">About Me</div>
+                <div class="redirect" id="mail">Mail</div>
+                <div class="redirect" id="github">Github</div>
             </nav>
         </header>
-    -->
         <main>
+            <section>
             <div class='landing'>
+                <div class="spacer"></div>
                 <div class="text-wrapper">
-                    <h1 class="headline">Code Portfolio</h1>
                     <h2 class="subheadline">Fabian Kraemer</h2>
-                    <div class="redirect">See More ></div>
+                    <h1 class="headline">Code Portfolio</h1>
+                    <div class="redirect" id="seemore">See More ></div>
                 </div>
                 <div class="image-wrapper">
                     <figure class="image landing-image"></figure>
                 </div>
+                <div class="gradient"></div>
             </div>
-    <!--  
-            <section>
-                <div class="box" id="boxA">
-                    <p>Box A</p>
-                </div>
-                <div class="box" id="boxB">
-                    <p>Box B</p>
-                </div>
-                <div class="box" id="boxC">
-                    <p>Box C</p>
-                </div>
-                <div class="box" id="boxD">
-                    <p>Box D</p>
-                </div>
             </section>
-    -->
+            <section class="projects">
+                <div class="subheadline"><h1>These projects were developed throughout my coding journey.</h1></div>
+                <div class="gridcontainer">
+                    <div class="box" id="boxa">
+                        <p>Project A</p>
+                    </div>
+                    <div class="box" id="boxb">
+                        <p>Project B</p>
+                    </div>
+                    <div class="box" id="boxc">
+                        <p>Project C</p>
+                    </div>
+                    <div class="box" id="boxd">
+                        <p>Project D</p>        
+                    </div>
+                </div>
+            </section>   
         </main>
+        <footer>
+            <p>by Fabian Kraemer. 2021</p>
+        </footer>
     </body>
 </html>
