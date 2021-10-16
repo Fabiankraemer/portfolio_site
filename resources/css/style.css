@@ -7,8 +7,8 @@
 html {
   font-family: "Roboto", Helvetica, sans-serif;
   font-size: 16px;
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: rgb(247, 248, 250);
 }
 
 h1 {
@@ -25,7 +25,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.125;
   font-weight: 400;
 }
@@ -36,189 +36,50 @@ p {
   font-weight: 300;
 }
 
-body {
-  min-height: 150px;
-  min-width: 200px;
-}
-
-a,
-a:link,
-a:visited {
-  color: seashell;
-}
-
-/* header section */
+/* nav section */
 
 header {
-  width: 100%;
-  height: 4rem;
-  position: fixed;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.85);
-  z-index: 9999;
+  width: 100vw;
+  background-color: rgba(10, 16, 17, 0.9);
+  padding: 1rem 0ch;
 }
 
 nav {
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0% 10%;
+}
+
+nav div {
+  flex: 1 1;
+  text-align: center;
+}
+
+nav div a {
+  color: rgb(247, 248, 250);
+}
+
+/* Hero section*/
+
+.hero {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+}
+
+.hero-content {
+  z-index: 1;
+  grid-area: 1/-1;
+  display: flex;
+  flex-direction: column;
+  margin: auto; /* [2] */
+  text-align: center;
+}
+
+.hero-thumb {
+  grid-area: 1/-1;
+  object-fit: cover;
+  object-position: bottom center;
   width: 100%;
   height: 100%;
-}
-
-.redirect {
-  font-size: 1.5rem;
-  line-height: 1.125;
-  font-weight: 500;
-}
-
-/* Main container */
-
-main {
-  display: flex;
-  flex-flow: column wrap;
-  width: 100%;
-  height: auto;
-}
-
-/* landing section */
-
-.landing {
-  display: flex;
-  flex-flow: column wrap;
-  height: 100vh;
-  width: 100%;
-  align-content: center;
-  justify-content: center;
-  background-image: url("../media/images/Header_small.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-color: black;
-  z-index: 1;
-  border-bottom: black 1px solid;
-}
-
-.spacer {
-  flex-basis: 10%;
-  flex-grow: 3;
-  flex-shrink: 3;
-}
-
-.text-wrapper {
-  align-self: center;
-  justify-self: center;
-  text-align: center;
-  flex-grow: 1;
-  flex-shrink: 1;
-  z-index: 2;
-  color: white;
-}
-
-#seemore {
-  color: blanchedalmond;
-  font-size: 2.5rem;
-  line-height: 1.3;
-}
-
-.gradient {
-  height: 10vh;
-  width: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-  z-index: 2;
-  flex-grow: 2;
-  flex-shrink: 2;
-}
-
-/* Project section */
-
-.projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  background-color: black;
-}
-
-.projects h1 {
-  text-align: center;
-  margin: 2%;
-  margin-top: 4%;
-}
-
-.gridcontainer {
-  margin: 3%;
-  background-color: black;
-  width: 100%;
-  height: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 0.9fr));
-  grid-auto-rows: 400px;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  background-color: seashell;
-}
-
-/* AboutMe section */
-
-#aboutmain {
-  position: relative;
-  top: 4rem;
-}
-
-.personal {
-  display: flex;
-}
-
-.asl {
-  margin-left: auto;
-  width: 60%;
-  height: auto;
-  justify-content: space-around;
-}
-
-.photo {
-  margin-right: auto;
-  width: 30%;
-  height: auto;
-  overflow: hidden;
-  object-fit: contain;
-}
-
-.codeskills {
-}
-
-.history {
-}
-
-/* Footer section */
-
-footer {
-  display: flex;
-  height: 3vh;
-  justify-content: flex-end;
-  align-items: center;
-  background: seashell;
-  color: black;
-  text-align: right;
-  padding-right: 1%;
-}
-
-/* Breakpoints */
-
-@media only screen and (min-width: 730px) {
-  .landing {
-    background-image: url("../media/images/Header.png");
-    background-position: center left;
-  }
+  min-height: 0;
 }
